@@ -1,0 +1,101 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    
+}
+
+.wrapper{
+    height:100vh; /*sara code wrapper me aana chahiye*/ 
+    overflow-x:hidden;
+    overflow-y:auto;
+    perspective:10px;/*IMP - distance between our eyes and z axis */
+}
+
+.container{
+    position:relative;/*IMP -bcz we make background and foreground absolute*/
+    height:100%;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    transform-style:preserve-3d;/*IMP */
+    z-index:-1;/*IMP- to handle layering effect*/
+}
+
+.background{/*IMP*/
+    transform:translateZ(-40px) scale(5);
+}
+
+.foreground{/*IMP*/
+    transform:translateZ(-20px) scale(3);
+}
+
+.background,.foreground{
+    position:absolute;
+    height:100%;
+    width:100%;
+    z-index:-1;/*to handle layering effect - adventure comes up */
+    object-fit:cover;
+}
+
+h1{
+    position :absolute;
+    top:5rem;
+    font-size:10rem;
+    letter-spacing:4px;
+    color:white;
+    text-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+section{
+    background-color: rgb(45,45,45);
+    color:white;
+    padding:5 rem 0;
+}
+
+.secHead{
+    font-size: 5rem;
+    padding:0 10rem;
+}
+
+.text{
+    font-size:1.5rem;
+    padding:0 10rem;
+    margin: 5rem 0;
+}
+
+.bg{
+    position:relative;
+    width:100%;
+    background-attachment: fixed; /*IMP-image will not move with text*/
+    background-position:center;/*IMP-Image at center*/
+    background-size:cover;/*IMP-covers window evenly */
+    height:500px;
+}
+
+.desc{
+    position:absolute;
+    background-color:white;
+    padding:0.5rem 2.5rem;
+    top:50%;
+    left:38%;
+    transform:translateX(-50%) translateX(-50);/* ?? */
+    color:black;
+    font-size:3.5rem;
+    font-weight:600;
+}
+
+.bg1{
+    background-image:url(assets/sport-1.jpg);
+}
+
+.bg2{
+    background-image:url(assets/sport-3.jpg);
+}
+
+.bg3{
+    background-image:url(assets/sport-2.jpg);
+}
+
+
+
